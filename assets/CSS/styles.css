@@ -711,6 +711,11 @@ img{
     margin-bottom: var(--mb-0-25);
 }
 
+.portfolio__video{
+    width: 230px;
+    height: auto;
+}
+
 .portfolio__subtitle{
     font-size: var(--small-font-size);
     color: var(--text-color-light);
