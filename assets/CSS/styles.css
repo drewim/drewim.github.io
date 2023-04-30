@@ -442,6 +442,7 @@ img{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     padding: 4px;
     text-align: left;
+    border-radius: 0.5rem;
     /* background-color: hsl(37, 75%, 88%); */
 }
 
@@ -698,9 +699,14 @@ img{
     padding: 0 1rem;
 }
 
+.portfolio__card:hover{
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem var(--secondary-color);
+}
+
 .portfolio__img{
     width: 230px;
-    max-height:min-content;
+    max-height: auto;
     /* object-fit: contain; */
     border-radius: .5rem;
     justify-self: center;
@@ -737,6 +743,15 @@ img{
     padding: 16px;
     text-align: center;
     border-radius: 1rem;
+}
+
+.portfolio__data a{
+    color: var(--first-color-lighter);
+}
+
+.portfolio__data a:hover{
+    color: var(--secondary-color);
+    transform: translateY(-1rem)
 }
 
 .swiper-button-prev,
