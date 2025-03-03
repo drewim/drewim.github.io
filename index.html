@@ -1,610 +1,449 @@
-<!DOCTYPE html> 
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-s">
-        
-        <!--===================== UNICONS =============================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Crucial for responsiveness -->
+    <meta name="description" content="Mechanical Engineer Portfolio - Design, Automation, Robotics">
+    <title>Drew Imhof - Mechanical Engineer Portfolio</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="assets/CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">  <!-- Add a favicon -->
+</head>
+<body>
+    <!-- ... (Your Header - Keep mostly as is, but ensure nav items are clear on mobile) ... -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Drew</a>
 
-        <!--===================== SWIPER CSS ==========================-->
-        <link rel ="stylesheet" href="assets/CSS/swiper-bundle.min.css">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-mountains nav__icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
 
-        <!--====================== CSS ================================-->
-        <link rel="stylesheet" href="assets/CSS/styles.css">
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                             <i class="uil uil-message nav__icon"></i> Contact Me
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times-square nav__close" id="nav-close"></i>
+            </div>
 
-        <title>Drew's Portfolio</title>
-    </head>
-    <body>
-        <!--====================== HEADER ==============================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Drew</a>
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i> Skills
-                            </a>
-                        </li>   
-                        <li class="nav__item">
-                            <a href="#qualifications" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Work
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#projects" class="nav__link">
-                                <i class="uil uil-mountains nav__icon"></i> Projects
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                 <i class="uil uil-message nav__icon"></i> Contact Me  
-                            </a>
-                        </li>          
-                    </ul>
-                    <i class="uil uil-times-square nav__close" id="nav-close"></i>                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-bars"></i>
                 </div>
-
-                <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-bars"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!--======================== MAIN ===============================-->
-        <main class="main">
-            <!--===================== HOME ============================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="" class="home__social-icon">
-                                <a href="https://www.linkedin.com/in/drew-imhof/" target="_blank" class="home__social-icon">
-                                    <i class="uil uil-linkedin"></i>
-                                </a>
-                            </a>
-
-                            <a href="https://github.com/drewim" target ="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x='-15' y='-15' xlink:href="assets/img/headshot_boulder.jpg"/>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hi, I'm Drew</h1>
-                            <h3 class="home__subtitle">Mechatronics Engineer</h3>
-                            <p class="home__description">Passionate about robotics and design.  Proficient in Solidworks. Can 
-                                code in C++, Python, and Matlab. Experience working in ROS fusing sensor data, path planning
-                                and implementing SLAM algorithms. 
-                                Also have implemented ROS navigation and control stacks for autonomous navigation.
-                                Comfortable working in Linux, Git, and Virtual Environments.
-                                Have characterized and developed control systems. 
-                                Interested in robotics/mechatronics, medical devices,
-                                additive manufacturing, and design optimization.</p>
-                                <a href="#contact" class="button button--flex">
-                                    Contact Me <i class="uil uil-message button__icon"></i>
-                                </a>
-                        <!-- </div> -->
-
-                            <div class="home__scroll">
-                                <a href="#about" class="home__scroll-button button--flex">
-                                    <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                                    <span class="home__scroll-name">Scroll Down</span> 
-                                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!--======================== ABOUT ============================-->
-            <section class="about section" id="about">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">My introduction</span>
-
-                <div class="about__container container grid">
-                    <img src="assets/img/biking_boulder.jpeg" alt="biking_boulder" class="about__img"></img>
-
-                    <div class="about__data"> 
-                        <p class="about__description"> Finishing a M.S. in Mechanical Engineering with a focus in Robotics at CU Boulder. 
-                            Over 6 years of mechanical design experience working in fast-paced environments. Contributed to all stages of design 
-                            and brought products from concept to production. Have developed automated end-of-line test systems. Looking to contribute
-                            to the development of innovative and challenging robotics or automation projects.
-                            <!-- Looking for my next opportunity after I finish my Master's! -->
-                        </p>
-
-                        <p class="about__description">Contact me with any questions or to view my current resume.</p>
-
-                        <p class="about__description"><strong>Hobbies: </strong> Outside of engineering, I enjoy being active and exploring the 
-                            beautiful outdoors in Colorado by cycling, running, or hiking. You can also find me doing yoga, reading, and working on personal robotics projects. 
-                            Finally, I love to cook -- some of my favorite dishes to prepare are yaki udon, pan-roasted salmon, and breakfast burritos! </p>
-
-                        <!-- <div class="about__info">
-                            <span class="about__info-title">5+</span>
-                            <span class="about__info-name"> Years <br> experience</span>
-                        </div>
-
-                        <div class="about__info">
-                            <span class="about__info-title">8+</span>
-                            <span class="about__info-name"> BLAH <br> BLAH</span>
-                        </div>
-
-                        <div class="about__info">
-                            <span class="about__info-title">8+</span>
-                            <span class="about__info-name"> BLAH <br> BLAH</span>
-                        </div> -->
-
-                        <!-- <div class="about__buttons">
-                            <a download="" href="assets/pdf/" class="button button--flex">
-                                Download Resume<i class="uil uil-donwload-alt button__icon><\i>"
-                            </a>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-            <!--========================= SKILLS ========================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Skills / Courses</h2>
-                <span class="section__subtitle">My technical abilities</span>
-
-                <div class="skills__container container grid">
-                    <!-- <div> -->
-                        <!--====================== SKILLS 1 ==================-->
-                        <div class="skills__content skills__open">
-                            <div class="skills__header skills__card">
-                                <i class="uil uil-tape skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Mechanical Design</h1>
-                                    <i class="uil uil-angle-down skills__arrow"></i>
-                                    <i class="skills__bar-title"></i>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">CAD</h3>
-                                            <span class="skills__number">Solidworks, nTopology, ProE, OpenSCAD</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Other Design Tools</h3>
-                                            <span class="skills__number">GD&T, DFMA, Gmsh, <br>Tolerance Analysis</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">FEA</h3>
-                                            <span class="skills__number">Solidworks Simulation, Abaqus, FEBio</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Mechatronics and Controls</h3>
-                                            <span class="skills__number">Simulink, Motors, Sensor Integration</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Prototyping</h3>
-                                            <span class="skills__number">Laser Cutting, 3D Printing, Soldering, Machining</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-
-                         <!--====================== SKILLS 2 ==================-->
-                         <div class="skills__content skills__open">
-                            <div class="skills__header skills__card">
-                                <i class="uil uil-keyboard-alt skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Coding</h1>
-                                    <i class="uil uil-angle-down skills__arrow"></i>
-                                    <!-- <span class="skills__subtitle"> Blah Blah</span> -->
-                                    <i class="skills__bar-title"></i>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Languages</h3>
-                                            <span class="skills__number">Python, C++, Matlab, Simulink </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Other CS Skills</h3>
-                                            <span class="skills__number">OOP, ROS, Data Analysis, Command Line, Keras/TF, SciKit-Learn </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Embedded </h3>
-                                            <span class="skills__number">Rasberry Pi, Arduino </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills__title">
-                                            <h3 class="skills__name">Other Tools</h3>
-                                            <span class="skills__number">Github, Git, Linux, Virtual Envs, VS Code</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                         <!--====================== SKILLS 3 ==================-->
-                        <div class="skills__content skills__open">
-                            <div class="skills__header skills__card">
-                                <i class="uil uil-hard-hat skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Grad School Courses</h1>
-                                    <i class="uil uil-angle-down skills__arrow"></i>
-                                    <i class="skills__bar-title"></i>
-
-                                    <div class="skills__list grid">
-                                        <div class="skills__data">
-                                            <div class="skills__title">
-                                                <h3 class="skills__name"> Robotics </h3>
-                                                <span class="skills__number">Mechatronics I & II, <br> Bio-Inspired Robotics, <br>Advanced Robotics (Comp. Sci.) </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__list grid">
-                                        <div class="skills__data">
-                                            <div class="skills__title">
-                                                <h3 class="skills__name"> Controls </h3>
-                                                <span class="skills__number">Feedback Controls, <br> Control Systems Lab </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__list grid">
-                                        <div class="skills__data">
-                                            <div class="skills__title">
-                                                <h3 class="skills__name"> Others </h3>
-                                                <span class="skills__number">Automated Mech. Design Synthesis, <br> Modeling Human Movement, 
-                                                    <br> Anatomy & Physiology
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    <!-- </div> -->
-                </div>
-            </section>
-
-            <!--======================= WORK ========================-->
-            
-
-      
-            <!--=========================== PROJECT TRY 2 ====================================-->
-            <section class="portfolio section" id="projects">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">Current and Recent Work</span>
-
-                <div class="portfolio__container container grid">
-                    
-                    <!--=============================== PROJECT2 1 ============================ -->
-                    <div class="portfolio__content grid portfolio__card swiper">
-                        <div class="swiper-wrapper">
-                            <img src="assets/img/soccerbot.JPG" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/SoccerBotField.jpg" alt="" class="portfolio__img swiper-slide">
-                            <iframe src="https://www.youtube.com/embed/wbuA2EPrKt4" title="YouTube video player" frameborder="0"
-                                class="portfolio__video swiper-slide"allowfullscreen></iframe>
-                        </div>
-
-                            <!-- Add Arrows -->
-                        <div class="swiper-button-next">
-                            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                        </div>   
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">SoccerBot</h3>
-
-                            <p class="portfolio__description">
-                                Automated robot designed to play 1v1 soccer game with computer vision to 
-                                    recognize ball
-                            </p>
-                            <!-- <a href="#" class="button button--flex button--small project__button">
-                                Check it out!
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a> -->
-                        </div>
-                    </div>
-
-                    <!--============================ Project 2 ==============================-->
-                    <div class="portfolio__content grid portfolio__card swiper">
-                        <div class="swiper-wrapper">
-                            <img src="assets/img/ArnieFinalistRender.JPG" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/ArnieProject.jpg" alt="" class="portfolio__img swiper-slide">
-                            <iframe src="https://www.youtube.com/embed/gAorw25FHDY" title="YouTube video player" 
-                            frameborder="0" class="portfolio__video swiper-slide" allowfullscreen></iframe>
-                            <!-- <img src="assets/img/biking_boulder.jpeg" alt="" class="portfolio__img swiper-slide"> -->
-                        </div>
-
-                            <!-- Add Arrows -->
-                        <div class="swiper-button-next">
-                            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                        </div>   
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">ArnieBot</h3>
-
-                            <p class="portfolio__description">
-                                An automated drink dispensing robot serving up your favorite Arnold Palmer variations
-                            </p>
-                            <!-- <a href="#" class="button button--flex button--small project__button">
-                                Check it out!
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a> -->
-                        </div>
-                    </div>
-
-                     <!--============================ Project 3 ==============================-->
-                     <div class="portfolio__content grid portfolio__card swiper">
-                        <div class="swiper-wrapper">
-                            <img src="assets/img/bellows_opt/Gmsh_full_bellows_iso_view.PNG" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/bellows_opt/Gmsh_full_bellows_headon_view.PNG" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/bellows_opt/InnerMeshSurf_highlighted_headon_view.png" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/bellows_opt/Abaqus_cross_section.PNG" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/bellows_opt/FullBellows_Vero_2MPa.gif" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/bellows_opt/FullBellows_VeroCopy_5MPa.gif" alt="" class="portfolio__img swiper-slide">
-                            <img src="assets/img/bellows_opt/FullBellows_Vero_10MPa.gif" alt="" class="portfolio__img swiper-slide">
-                        </div>
-
-                            <!-- Add Arrows -->
-                        <div class="swiper-button-next">
-                            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                        </div>   
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Hydraulic Bellows Multi-Material Optimization</h3>
-                            <!-- <p class="portfolio__subtitle">(Current Project)</p> -->
-
-                            <p class="portfolio__description">
-                                Automated optimization of the multi-material distribution of 3D-printable hydraulic bellows 
-                                using a genetic algorithm. Involved integration of Gmsh, Matlab, and Abaqus.
-                            </p>
-                            <!-- <a href="#" class="button button--flex button--small project__button">
-                                Check it out!
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a> -->
-                        </div>
-                    </div>
- <!--============================ Project 4 ==============================-->
-                     <div class="portfolio__content grid portfolio__card swiper">
-                        <div class="swiper-wrapper">
-                            <img src="assets/img/cycloid_assm_wExplodegif.gif" alt="Cycloid Solidworks Motion Gif" class="portfolio__img swiper-slide">
-                            <img src="assets/img/plot_ecc_1.1_03_31_2023_1055.gif" alt="Cycloid Visualization GIF" class="portfolio__img swiper-slide">
-                            <img src="assets/img/cycloid_plot_03_31_2023_1054.png" alt="Cycloid Plot Matplotlib" class="portfolio__img swiper-slide">
-                        </div>
-
-                            <!-- Add Arrows -->
-                        <div class="swiper-button-next">
-                            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                        </div>   
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title"> Cycloidal Drive Personal Project</h3>
-                            <!-- <p class="portfolio__subtitle">(Current Project)</p> -->
-                            <a href="https://github.com/drewim/cycloidal_drive">Link to Github project repo</a>
-                            <p class="portfolio__description">
-                                Created Python classes to automate creation of cycloidal disc and validate inputs.
-                                Prints equations that can be copied into Solidworks "Equation Driven Curve" tool for creating
-                                the cycloidal disc. Creates a parameter .txt file that can be linked to in Solidworks to create 
-                                "Global Variables. Created an assembly and motion study in Solidworks. 
-                                Next steps would be 3D printing and design iteration."
-                            </p>
-                            <!-- <a href="#" class="button button--flex button--small project__button">
-                                Check it out!
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a> -->
-                        </div>
-                    </div>
-
-                    <!--============================ Project Other ==============================-->
-                    <div class="portfolio__content grid portfolio__card swiper">
-                    <div class="swiper-wrapper">
-                        <iframe src="https://www.youtube.com/embed/ty7RamY3gZs" title="Inverted Pendulum Swing Up and Control" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                             class="portfolio__video swiper-slide" allowfullscreen></iframe>
-                        <!-- <iframe src="https://www.youtube.com/embed/PdceSwkKJfs" title="YouTube video player" frameborder="0"
-                             class="portfolio__video swiper-slide" allowfullscreen></iframe> -->
-                    </div>
-
-                        <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>   
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <div class="portfolio__data">
-                        <h3 class="portfolio__title">Other Projects</h3>
-                        <!-- <p class="portfolio__subtitle">(Current Project)</p> -->
-
-                        <p class="portfolio__description">
-                           Some other projects I've worked on: Kick up and Stabilization of inverted pendulum
-                        </p>
-                        <!-- <a href="#" class="button button--flex button--small project__button">
-                            Check it out!
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </a> -->
-                    </div>
-                </div>
-
-                </div>
-            </section>
-
-            <!--=========================== CONTACT ME ============================-->
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Get in touch</span>
-
-                <div class="contact__container container grid">
-                    <div>
-                        <div class="contact__information">
-                            <i class="uil uil-envelope-alt contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">drewcimhof@gmail.com</span>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">Boulder, CO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact__description">
-                        Email me to request a current resume or inquire about my services. 
-                        <!-- Open to 
-                        positions in mechatronics, robotics, medical devices, additive manufacturing, or design optimization. 
-                        Also open to coding roles. -->
-                    </div>
-                    
-                </div>
-
-            </section>
-
-        </main>
-
-        <!--========================= FOOTER =============================-->
-        <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title">Drew</h1>
-                        <span class="footer__subtitle">Mechatronics Engineer</span>
-                    </div>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#projects" class="footer__link">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer__link">Contact Me</a>
-                        </li>
-                    </ul>
-
-                    <div class="footer__socials">
-                        <a href="https://www.linkedin.com/in/drew-imhof/" target="_blank" class="footer__social">
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- HOME SECTION -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/drew-imhof/" target="_blank" rel="noopener noreferrer" class="home__social-icon">
                             <i class="uil uil-linkedin"></i>
                         </a>
+                        <a href="https://github.com/drewim" target="_blank" rel="noopener noreferrer" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                <image class="home__blob-img" x='-15' y='-15' xlink:href="assets/img/headshot_boulder.jpg"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I'm Drew</h1>
+                        <h3 class="home__subtitle">Mechanical Engineer</h3>
+                        <p class="home__description">
+                            Passionate about robotics and automation. Proficient in mechanical design, CAD (Solidworks), and programming (Python, C++, Matlab).
+                            Experience with control systems, ROS, sensor fusion, optimization,and path planning. Seeking interesting and challenging opportunities.
+                        </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me <i class="uil uil-message button__icon"></i>
+                        </a>
+
+                        <div class="home__scroll">
+                            <a href="#about" class="home__scroll-button button--flex">
+                                <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                                <span class="home__scroll-name">Scroll Down</span>
+                                <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- PROJECTS SECTION -->
+        <section class="portfolio section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Showcasing my grad school and personal projects</span>
+            
+            <div class="portfolio__container container grid">
+                <!-- SoccerBot Project -->
+                <article class="portfolio__content grid portfolio__card">
+                    <figure class="portfolio__media swiper">
+                        <div class="swiper-wrapper">
+                            <img src="assets/img/soccerbot.JPG" alt="SoccerBot Robot" class="portfolio__img swiper-slide">
+                            <img src="assets/img/SoccerBotField.jpg" alt="SoccerBot on Field" class="portfolio__img swiper-slide">
+                            <div class="video-wrapper swiper-slide">
+                                <iframe src="https://www.youtube.com/embed/wbuA2EPrKt4" title="SoccerBot Demo" frameborder="0"allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-pagination"></div>
+                    </figure>
+                    
+                    <figcaption class="portfolio__data">
+                        <h3 class="portfolio__title">SoccerBot</h3>
+                        <p class="portfolio__description">
+                            Autonomous robot designed to play 1v1 soccer, using computer vision for ball recognition.
+                        </p>
+                    </figcaption>
+                </article>
+                
+                <!-- ArnieBot Project -->
+                <article class="portfolio__content grid portfolio__card">
+                    <figure class="portfolio__media swiper"> 
+                        <div class="swiper-wrapper">
+                            <img src="assets/img/ArnieFinalistRender.JPG" alt="ArnieBot Render" class="portfolio__img swiper-slide">
+                            <img src="assets/img/ArnieProject.jpg" alt="ArnieBot Robot" class="portfolio__img swiper-slide">
+                            <div class="video-wrapper swiper-slide">
+                                <iframe src="https://www.youtube.com/embed/gAorw25FHDY" title="ArnieBot Demo"
+                                frameborder="0" allowfullscreen class="portfolio__img"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </figure>
+                    
+                    <figcaption class="portfolio__data">
+                        <h3 class="portfolio__title">ArnieBot</h3>
+                        <p class="portfolio__description">
+                            Automated drink-dispensing robot serving Arnold Palmer variations.
+                        </p>
+                    </figcaption>
+                </article>
+                
+                <!-- Hydraulic Bellows Optimization Project -->
+                <article class="portfolio__content grid portfolio__card">
+                    <figure class="portfolio__media swiper">
+                        <div class="swiper-wrapper">
+                            <img src="assets/img/bellows_opt/FullBellows_Vero_2MPa.gif" alt="Bellows 2MPa" class="portfolio__img swiper-slide">
+                            <img src="assets/img/bellows_opt/FullBellows_VeroCopy_5MPa.gif" alt="Bellows 5MPa" class="portfolio__img swiper-slide">
+                            <img src="assets/img/bellows_opt/FullBellows_Vero_10MPa.gif" alt="Bellows 10MPa" class="portfolio__img swiper-slide">
+                            <img src="assets/img/bellows_opt/Gmsh_full_bellows_iso_view.PNG" alt="Bellows ISO View" class="portfolio__img swiper-slide">
+                            <img src="assets/img/bellows_opt/Gmsh_full_bellows_headon_view.PNG" alt="Bellows Headon View" class="portfolio__img swiper-slide">
+                            <img src="assets/img/bellows_opt/InnerMeshSurf_highlighted_headon_view.png" alt="Bellows Inner Mesh" class="portfolio__img swiper-slide">
+                            <img src="assets/img/bellows_opt/Abaqus_cross_section.PNG" alt="Bellows Abaqus Cross Section" class="portfolio__img swiper-slide">
+                        </div>
+                        <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-pagination"></div>
+                    </figure>
+                    
+                    <figcaption class="portfolio__data">
+                        <h3 class="portfolio__title">Hydraulic Bellows Multi-Material Optimization</h3>
+                        <p class="portfolio__description">
+                            Automated optimization of 3D-printable hydraulic bellows using a genetic algorithm. Integrated Gmsh, Matlab, and Abaqus.
+                        </p>
+                    </figcaption>
+                </article>
+                
+                <!-- Cycloidal Drive Project -->
+                <article class="portfolio__content grid portfolio__card">
+                    <figure class="portfolio__media swiper">
+                        <div class="swiper-wrapper">
+                            <img src="assets/img/cycloid_assm_wExplodegif.gif" alt="Cycloid Assembly" class="portfolio__img swiper-slide">
+                            <img src="assets/img/plot_ecc_1.1_03_31_2023_1055.gif" alt="Cycloid Visualization" class="portfolio__img swiper-slide">
+                            <img src="assets/img/cycloid_plot_03_31_2023_1054.png" alt="Cycloid Plot" class="portfolio__img swiper-slide">
+                        </div>
+                        <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-pagination"></div>
+                    </figure>
+                    <figcaption class="portfolio__data">
+                        <h3 class="portfolio__title">Cycloidal Drive Design</h3>
+                        <a href="https://github.com/drewim/cycloidal_drive" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                        <p class="portfolio__description">
+                            Automated cycloidal disc creation using Python, Solidworks integration, and motion study.
+                        </p>
+                    </figcaption>
+                </article>
+                
+                <!-- Other Projects -->
+                <article class="portfolio__content grid portfolio__card">
+                    <figure class="portfolio__media swiper">
+                        <div class="swiper-wrapper">
+                            <div class="video-wrapper swiper-slide">
+                                <iframe src="https://www.youtube.com/embed/ty7RamY3gZs" title="Inverted Pendulum" frameborder="0" allowfullscreen class="portfolio__img"></iframe>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+                        <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div> -->
+                        <div class="swiper-pagination"></div>
+                    </figure>
+                    <figcaption class="portfolio__data">
+                        <h3 class="portfolio__title">Inverted Pendulum Control</h3>
+                        <p class="portfolio__description">
+                            Swing-up and stabilization control of an inverted pendulum.
+                        </p>
+                    </figcaption>
+                </article>
+            </div>
+        </section>
+        <!-- SKILLS SECTION -->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills & Courses</h2>
+            <span class="section__subtitle">My technical expertise</span>
+            
+            <div class="skills__container container grid">
+                <!-- MECHANICAL DESIGN SKILLS -->
+                <div class="skills__content skills__open">
+                    <div class="skills__header skills__card">
+                        <i class="uil uil-tape skills__icon"></i>
+                        <div>
+                            <h1 class="skills__title">Mechanical Design</h1>
+                        </div>
+                    </div>
+                    <div class="skills__list grid">
+                        <div>
+                            <h3 class="skills__name">CAD</h3>
+                            <span class="skills__number">Solidworks, nTopology, ProE, OpenSCAD</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">FEA</h3>
+                            <span class="skills__number">Solidworks Simulation, Abaqus, FEBio</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">Prototyping</h3>
+                            <span class="skills__number">3D Printing - FDM, Polyjet, SLA, Laser Cutting, Machining, Water Jetting</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">Other</h3>
+                            <span class="skills__number">GD&T, DFMA, Tolerance Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CODING SKILLS -->
+                <div class="skills__content skills__open">
+                    <div class="skills__header skills__card">
+                        <i class="uil uil-keyboard-alt skills__icon"></i>
+                        <div>
+                            <h1 class="skills__title">Coding & Software</h1>
+                        </div>
+                    </div>
+                    <div class="skills__list grid">
+                        <div>
+                            <h3 class="skills__name">Languages</h3>
+                            <span class="skills__number">Python, C++, Matlab</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">Robotics</h3>
+                            <span class="skills__number">ROS, Control Systems, Path Planning, SLAM</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">Other</h3>
+                            <span class="skills__number">Linux, Git, Virtual Environments</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GRAD SCHOOL COURSES -->
+                <div class="skills__content skills__open">
+                    <div class="skills__header skills__card">
+                        <i class="uil uil-hard-hat skills__icon"></i>
+                        <div>
+                            <h1 class="skills__title">Graduate Coursework</h1>
+                        </div>
+                    </div>
+                    <div class="skills__list grid">
+                        <div>
+                            <h3 class="skills__name">Robotics</h3>
+                            <span class="skills__number">Mechatronics, Bio-Inspired Robotics, Advanced Robotics</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">Controls</h3>
+                            <span class="skills__number">Feedback Controls, Control Systems Lab</span>
+                        </div>
+                        <div>
+                            <h3 class="skills__name">Other</h3>
+                            <span class="skills__number">Automated Design, Modeling Human Movement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- ABOUT SECTION -->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My background</span>
+
+            <div class="about__container container grid">
+                <img src="assets/img/biking_boulder.jpeg" alt="Drew biking in Boulder" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">
+                        7+ years of experience in mechanical and automation design contributing to all stages of design from conception to production in aerospace, defense, medical, and communications industries. 
+                        Enjoy using multi-disciplinary skills to develop unique electromechanical and autonomous systems. Have developed test automation systems for a variety of applications. Looking to contribute 
+                        to robotics, automation, optimization, and/or control systems projects.
+                    </p>
+
+                    <p class="about__description">
+                        MS in Mechanical Engineering (focus in Robotics) - 2023 | CU Boulder<br>
+                        BA in Mechanical Engineering - 2016 | University of Michigan
+                    </p>
+
+                    <p class="about__description">
+                        Contact me to request my resume or discuss potential opportunities. Willing to consult on electromechanical systems, from small-scale prototypes to large-scale engineering challenges.
+                    </p>
+
+                    <!-- <p class="about__description">
+                        <strong>Outside of work:</strong> I enjoy cycling, running, hiking, yoga, reading, and personal robotics projects. I also love cooking!
+                    </p> -->
+
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Let's connect</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__subtitle">drewcimhof@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">San Diego, CA</span>
+                        </div>
                     </div>
                 </div>
 
-                <p class="footer__copy">&#169; DrewImhof. All rights reserved</p>
+                <div class="contact__description">
+                    Email me to request my resume or inquire about my services.
+                </div>
             </div>
-        </footer>
-        <!--========================== SCROLL TOP ========================-->
-        <a href="" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
+        </section>
+    </main>
 
-        <!--========================= SWIPER JS ==========================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Drew Imhof</h1>
+                    <span class="footer__subtitle">Mechatronics Engineer</span>
+                </div>
 
-        <!--========================== MAIN JS ===========================-->
-        <script src="assets/js/main.js"></script>
-    </body>
-    </html>
+                <ul class="footer__links">
+                    <li><a href="#projects" class="footer__link">Projects</a></li>
+                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/drew-imhof/" target="_blank" rel="noopener noreferrer" class="footer__social">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/drewim" target="_blank" rel="noopener noreferrer" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="footer__copy"> 2025 Drew Imhof. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL UP BUTTON -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.swiper').forEach(swiperContainer => {
+            new Swiper(swiperContainer, {
+              loop: true,
+              slidesPerView: 1,
+              navigation: {
+                nextEl: swiperContainer.querySelector('.swiper-button-next'),
+                prevEl: swiperContainer.querySelector('.swiper-button-prev'),
+              },
+              pagination: {
+                el: swiperContainer.querySelector('.swiper-pagination'),
+                clickable: true,
+              },
+              observer: true,
+              observeParents: true,
+            });
+          });
+        });
+    </script>
+        
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

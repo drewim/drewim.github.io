@@ -68,41 +68,39 @@ tabs.forEach(tab =>{
     })
 })
 
-/*================================== PROJECT SWIPER ===============================*/
-// import Swiper from 'swiper/swiper-bundle.esm.js';
-// import 'swiper/swiper-bundle.css';
-// let swiper = new Swiper('.project__container', {
-//   cssMode: true,
-//   loop: true,
-
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   }
-// //   mousewheel: true,
-// //   keyboard: true,
-// });
-
 /*============================= PORTFOLIO SWIPER ===================================*/
-let swiper = new Swiper('.portfolio__content', {
-    cssMode: true,
-    loop: true,
-  
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    }
-  //   mousewheel: true,
-  //   keyboard: true,
-  });
+// Initialize all project media swipers
+let mediaSwipers = document.querySelectorAll('.portfolio__media.swiper');
+mediaSwipers.forEach((element) => {
+    new Swiper(element, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        grabCursor: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        navigation: {
+            nextEl: element.querySelector('.swiper-button-next'),
+            prevEl: element.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+            el: element.querySelector('.swiper-pagination'),
+            clickable: true,
+        }
+    });
+});
+
+// Update swipers after all content is loaded
+window.addEventListener('load', function() {
+    mediaSwipers.forEach((element) => {
+        const swiperInstance = element.swiper;
+        if (swiperInstance) {
+            swiperInstance.update();
+        }
+    });
+});
 
   /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
